@@ -1,7 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <RootNamespace>Ensure</RootNamespace>
+    <AssemblyTitle>Ensure</AssemblyTitle>
+    <AssemblyName>Ensure</AssemblyName>
+    <Description>A library of extension methods to validate arguments.</Description>
+    <Product>Ensure</Product>
+    <Company>afnpires</Company>
+    <Copyright>Copyright © 2018 Alexandre Pires</Copyright>
+    <Authors>Alexandre Pires</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild Condition=" '$(BuildConfiguration)' == 'release' ">true</GeneratePackageOnBuild>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeSource>True</IncludeSource>
+    <IncludeSymbols>True</IncludeSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>afnpires.Ensure</PackageId>
+    <PackageTags>ensure;validation</PackageTags>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageProjectUrl>https://github.com/afnpires/Ensure</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/afnpires/Ensure/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/afnpires/Ensure.git</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
