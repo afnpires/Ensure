@@ -1,9 +1,9 @@
-﻿using FluentAssertions;
-using System;
-using Xunit;
-
-namespace Ensure
+﻿namespace Ensure
 {
+    using FluentAssertions;
+    using System;
+    using Xunit;
+
     public class EnsureStringExtensionsTests
     {
         [Fact]
