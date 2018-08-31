@@ -10,9 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensure.Tests", "tests\Ensure.Tests\Ensure.Tests.csproj", "{2B85C9BF-8172-46B3-9509-8B7A331B2DF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ensure.Tests", "tests\Ensure.Tests\Ensure.Tests.csproj", "{2B85C9BF-8172-46B3-9509-8B7A331B2DF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensure", "src\Ensure\Ensure.csproj", "{9DD61E95-AFDD-44BD-95E6-055CED4E7544}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ensure", "src\Ensure\Ensure.csproj", "{9DD61E95-AFDD-44BD-95E6-055CED4E7544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensure.Benchmarks", "benchmarks\Ensure.Benchmarks\Ensure.Benchmarks.csproj", "{9982AF7A-F572-4769-AB01-BCCB0B1EE111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +30,10 @@ Global
 		{9DD61E95-AFDD-44BD-95E6-055CED4E7544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DD61E95-AFDD-44BD-95E6-055CED4E7544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DD61E95-AFDD-44BD-95E6-055CED4E7544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9982AF7A-F572-4769-AB01-BCCB0B1EE111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9982AF7A-F572-4769-AB01-BCCB0B1EE111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9982AF7A-F572-4769-AB01-BCCB0B1EE111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9982AF7A-F572-4769-AB01-BCCB0B1EE111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
