@@ -6,6 +6,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="BenchmarkDotNet.Artifacts\**" />
+      <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**" />
+      <None Remove="BenchmarkDotNet.Artifacts\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="BenchmarkDotNet" Version="0.11.1" />
         <PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.11.1" />
     </ItemGroup>
