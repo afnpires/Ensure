@@ -10,7 +10,7 @@
         ///     <para />
         ///     If no <paramref name="name"/> is passed, the nameof <paramref name="value"/> is assumed.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">The type of <paramref name="value"/>.</typeparam>
         /// <param name="value">
         ///     The value to be verified.
         /// </param>
@@ -33,6 +33,7 @@
         ///     Throws a <seealso cref="ArgumentException"/> with <paramref name="message"/> as argument,
         /// if the <paramref name="validator"/> function returns false.
         /// </summary>
+        /// <typeparam name="T">The type of <paramref name="value"/>.</typeparam>
         /// <param name="value">
         ///     The value to be verified.
         /// </param>

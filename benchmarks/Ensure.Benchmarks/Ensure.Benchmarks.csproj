@@ -6,18 +6,30 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="BenchmarkDotNet.Artifacts\**" />
-      <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**" />
-      <None Remove="BenchmarkDotNet.Artifacts\**" />
+        <Compile Remove="BenchmarkDotNet.Artifacts\**" />
+        <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**" />
+        <None Remove="BenchmarkDotNet.Artifacts\**" />
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="BenchmarkDotNet" Version="0.11.1" />
         <PackageReference Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.11.1" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Ensure\Ensure.csproj" />
+        <ProjectReference Include="..\..\src\Ensure\Ensure.csproj" />
     </ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <CodeAnalysisRuleSet>../../Ensure.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <CodeAnalysisRuleSet>../../Ensure.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
 
 </Project>

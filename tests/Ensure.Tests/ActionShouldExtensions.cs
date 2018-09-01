@@ -1,7 +1,7 @@
 ﻿namespace Ensure
 {
-    using FluentAssertions;
     using System;
+    using FluentAssertions;
 
     internal static class ActionShouldExtensions
     {

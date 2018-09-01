@@ -1,13 +1,24 @@
 ﻿namespace Ensure
 {
-    using FluentAssertions;
     using System;
+    using FluentAssertions;
     using Xunit;
 
-    public class EnsureStringExtensionsTests
+    public static class EnsureStringExtensionsTests
     {
+        [Theory]
+        [InlineData(null, null, "value")]
+        [InlineData("", null, "value")]
+        [InlineData(null, "test", "test")]
+        public static void EnsureNotNullOrEmpty_WithInvalidString_ThrowsArgumentNullException(string target, string targetName, string expected)
+        {
+            Action testCall = () => target.EnsureNotNullOrEmpty(targetName);
+
+            testCall.ShouldThrowArgumentNullException(expected);
+        }
+
         [Fact]
-        public void EnsureNotNullOrEmpty_WithValidString_DoesNothing()
+        public static void EnsureNotNullOrEmpty_WithValidString_DoesNothing()
         {
             const string target = "a";
 
@@ -19,34 +30,23 @@
         [Theory]
         [InlineData(null, null, "value")]
         [InlineData("", null, "value")]
+        [InlineData(" ", null, "value")]
         [InlineData(null, "test", "test")]
-        public void EnsureNotNullOrEmpty_WithInvalidString_ThrowsArgumentNullException(string target, string targetName, string expected)
+        public static void EnsureNotNullOrWhitespace_WithInvalidString_ThrowsArgumentNullException(string target, string targetName, string expected)
         {
-            Action testCall = () => target.EnsureNotNullOrEmpty(targetName);
+            Action testCall = () => target.EnsureNotNullOrWhitespace(targetName);
 
             testCall.ShouldThrowArgumentNullException(expected);
         }
 
         [Fact]
-        public void EnsureNotNullOrWhitespace_WithValidString_DoesNothing()
+        public static void EnsureNotNullOrWhitespace_WithValidString_DoesNothing()
         {
             const string target = "a";
 
             Action testCall = () => target.EnsureNotNullOrWhitespace();
 
             testCall.Should().NotThrow<ArgumentNullException>();
-        }
-
-        [Theory]
-        [InlineData(null, null, "value")]
-        [InlineData("", null, "value")]
-        [InlineData(" ", null, "value")]
-        [InlineData(null, "test", "test")]
-        public void EnsureNotNullOrWhitespace_WithInvalidString_ThrowsArgumentNullException(string target, string targetName, string expected)
-        {
-            Action testCall = () => target.EnsureNotNullOrWhitespace(targetName);
-
-            testCall.ShouldThrowArgumentNullException(expected);
         }
     }
 }

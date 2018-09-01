@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		Ensure.ruleset = Ensure.ruleset
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -14,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ensure.Tests", "tests\Ensur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ensure", "src\Ensure\Ensure.csproj", "{9DD61E95-AFDD-44BD-95E6-055CED4E7544}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ensure.Benchmarks", "benchmarks\Ensure.Benchmarks\Ensure.Benchmarks.csproj", "{9982AF7A-F572-4769-AB01-BCCB0B1EE111}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ensure.Benchmarks", "benchmarks\Ensure.Benchmarks\Ensure.Benchmarks.csproj", "{9982AF7A-F572-4769-AB01-BCCB0B1EE111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
