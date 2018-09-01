@@ -4,7 +4,7 @@ namespace Ensure
     using System;
     using Xunit;
 
-    public class EnsureObjectExtensionsTests
+    public class EnsureGenericExtensionsTests
     {
         [Theory]
         [InlineData(null, "value")]
@@ -58,9 +58,10 @@ namespace Ensure
         }
 
         [Theory]
-        [InlineData(null, null, "value")]
+        [InlineData(null, null, "message")]
         [InlineData("a", null, "message")]
-        public void Ensure_WithMissingParameters_ThrowsArgumentNullExceptio(string target, string message, string expected)
+        [InlineData(10, null, "message")]
+        public void Ensure_WithMissingParameters_ThrowsArgumentNullExceptio(object target, string message, string expected)
         {
             Action testCall = () => target.Ensure(s => false, message);
 

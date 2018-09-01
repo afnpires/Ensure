@@ -2,9 +2,10 @@
 {
     using System;
 
-    public static class EnsureObjectExtensions
+    public static class EnsureGenericExtensions
     {
-        public static void EnsureNotNull(this object value, string name = null)
+        public static void EnsureNotNull<T>(this T value, string name = null)
+            where T : class
         {
             if (value is null)
             {
@@ -14,7 +15,6 @@
 
         public static void Ensure<T>(this T value, Func<T, bool> validator, string message)
         {
-            value.EnsureNotNull(nameof(value));
             validator.EnsureNotNull(nameof(validator));
             message.EnsureNotNullOrEmpty(nameof(message));
 

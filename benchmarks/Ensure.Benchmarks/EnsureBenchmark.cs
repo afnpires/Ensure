@@ -9,14 +9,15 @@
     public class EnsureBenchmark
     {
         private const int Iterations = 1000;
+        private static readonly object structTarget = 10;
 
         [Benchmark]
         public static void EnsureNotNull_Struct()
         {
-            const int target = 1;
             for (int i = 0; i < Iterations; i++)
             {
-                target.EnsureNotNull();
+                // If structTarget was created inside the method it would box an allocate 24b
+                structTarget.EnsureNotNull();
             }
         }
 
